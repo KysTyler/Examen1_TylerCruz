@@ -917,11 +917,17 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Create  Juegos"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_CrearJuegoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="Button_CrearFigura">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Create  Figuras"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_CrearFiguraActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="label_Person_Edad">
                   <Properties>

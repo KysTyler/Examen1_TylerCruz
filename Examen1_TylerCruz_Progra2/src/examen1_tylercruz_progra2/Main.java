@@ -323,8 +323,18 @@ public class Main extends javax.swing.JFrame {
         });
 
         Button_CrearJuego.setText("Create  Juegos");
+        Button_CrearJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_CrearJuegoActionPerformed(evt);
+            }
+        });
 
         Button_CrearFigura.setText("Create  Figuras");
+        Button_CrearFigura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_CrearFiguraActionPerformed(evt);
+            }
+        });
 
         label_Person_Edad.setText("jFormattedTextField1");
 
@@ -831,6 +841,32 @@ public class Main extends javax.swing.JFrame {
         Button_Color.setForeground(JColorChooser.showDialog(this, "Eliga el color: ", Color.yellow));
         color = Button_Color.getForeground();
     }//GEN-LAST:event_Button_ColorActionPerformed
+
+    private void Button_CrearJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearJuegoActionPerformed
+        // TODO add your handling code here:
+        //int edicion, String casaElaboracion, String pais, String titulo, Color color,
+        //String descripcion, String editorial, int tamano, int puntuacion, Person person
+        int edicion,tamano,puntuacion;
+        edicion = Integer.parseInt(this.label_Articulos_Edicion.getText());
+        tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
+        puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
+        articulos.add(new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
+        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
+        
+    }//GEN-LAST:event_Button_CrearJuegoActionPerformed
+
+    private void Button_CrearFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearFiguraActionPerformed
+        // TODO add your handling code here:
+        //String descriptionFig, String instructions, String garantia, String titulo, Color color, String descripcion, String editorial,
+        //int tamano, int puntuacion, Person person
+        int tamano,puntuacion;
+        tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
+        puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
+        articulos.add(new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
+        this.label_Articulos_Titulo.getText(),color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,
+        (Person)this.ComboBox_Contactos.getSelectedItem()));
+        
+    }//GEN-LAST:event_Button_CrearFiguraActionPerformed
 
     /**
      * @param args the command line arguments
