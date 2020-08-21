@@ -7,7 +7,10 @@ package examen1_tylercruz_progra2;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JColorChooser;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -112,6 +115,15 @@ public class Main extends javax.swing.JFrame {
         label_Person_Sueldo = new javax.swing.JTextField();
         Button_Color = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTable_Person = new javax.swing.JTable();
+        RM_ComboBox_Contactos = new javax.swing.JComboBox<>();
+        RM_ComboBox_Articulos = new javax.swing.JComboBox<>();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        RM_Button_Remove = new javax.swing.JButton();
+        RM_Button_Modificar = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
 
@@ -654,15 +666,101 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Create", jPanel2);
 
+        JTable_Person.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(JTable_Person);
+
+        RM_ComboBox_Contactos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        RM_ComboBox_Contactos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                RM_ComboBox_ContactosItemStateChanged(evt);
+            }
+        });
+        RM_ComboBox_Contactos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RM_ComboBox_ContactosActionPerformed(evt);
+            }
+        });
+
+        RM_ComboBox_Articulos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel38.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel38.setText("Combox de Personas: ");
+
+        jLabel39.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel39.setText("Combox de Articulos: ");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RM_ComboBox_Contactos, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RM_ComboBox_Articulos, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(183, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel39))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RM_ComboBox_Contactos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RM_ComboBox_Articulos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        RM_Button_Remove.setText("Remove");
+
+        RM_Button_Modificar.setText("Modificar");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1144, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(RM_Button_Remove)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(RM_Button_Modificar)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 576, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RM_Button_Remove)
+                    .addComponent(RM_Button_Modificar))
+                .addGap(0, 169, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Remove and Modify", jPanel3);
@@ -762,9 +860,20 @@ public class Main extends javax.swing.JFrame {
             estado = "Casado";
         }
         altura = Double.parseDouble(this.label_Person_Altura.getText());
-        contactos.add(new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
+        Gerente x = new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
                 this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
-                edad, sexo, estado, altura, peso));
+                edad, sexo, estado, altura, peso);
+//        contactos.add(new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
+//                this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
+//                edad, sexo, estado, altura, peso));
+        contactos.add(x);
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
+        dc.addElement(x);
+        DefaultComboBoxModel dc1
+                = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
+        dc.addElement(x);
+        
         this.label_Person_Usuario.setText("");
         this.label_Person_Password.setText("");
         this.label_Person_Altura.setText("");
@@ -776,6 +885,7 @@ public class Main extends javax.swing.JFrame {
         this.label_Person_Horario.setText("");
         this.label_Person_ID.setText("");
         this.label_Person_Nombre.setText("");
+        JOptionPane.showMessageDialog(null, "Gerente fue creado exitosamente!");
 
 
     }//GEN-LAST:event_Button_CrearGerenteActionPerformed
@@ -805,9 +915,21 @@ public class Main extends javax.swing.JFrame {
         } else if (RadioB_Casado.isSelected()) {
             estado = "Casado";
         }
-        contactos.add(new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
+        Personal x = new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
                 semanas, sueldo, this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
-                edad, sexo, estado, altura, peso));
+                edad, sexo, estado, altura, peso);
+//        contactos.add(new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
+//                semanas, sueldo, this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
+//                edad, sexo, estado, altura, peso));
+        contactos.add(x);
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
+        dc.addElement(x);
+        DefaultComboBoxModel dc1
+                = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
+        dc.addElement(x);
+        
+        
         this.label_Person_Altura.setText("");
         this.label_Person_Horario.setText("");
         this.label_Person_Peso.setText("");
@@ -817,6 +939,7 @@ public class Main extends javax.swing.JFrame {
         this.label_Person_Horario.setText("");
         this.label_Person_ID.setText("");
         this.label_Person_Nombre.setText("");
+        JOptionPane.showMessageDialog(null, "Personal fue creado exitosamente!");
 
 
     }//GEN-LAST:event_Button_CrearPersonalActionPerformed
@@ -831,9 +954,16 @@ public class Main extends javax.swing.JFrame {
         estadoCalidad = Integer.parseInt(this.label_Articulos_Calidad.getText());
         tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
         puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-        articulos.add(new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
-        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
-
+//        articulos.add(new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
+//        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
+//        
+        Comic x = new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
+        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem());
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
+        dc.addElement(x);
+        
+        JOptionPane.showMessageDialog(null, "Comic fue creado exitosamente!");
     }//GEN-LAST:event_Button_CrearComicActionPerformed
 
     private void Button_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ColorActionPerformed
@@ -850,9 +980,16 @@ public class Main extends javax.swing.JFrame {
         edicion = Integer.parseInt(this.label_Articulos_Edicion.getText());
         tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
         puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-        articulos.add(new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
-        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
+//        articulos.add(new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
+//        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
         
+        Juego x = new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
+        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem());
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
+        dc.addElement(x);
+        
+        JOptionPane.showMessageDialog(null, "Juego fue creado exitosamente!");
     }//GEN-LAST:event_Button_CrearJuegoActionPerformed
 
     private void Button_CrearFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearFiguraActionPerformed
@@ -862,11 +999,62 @@ public class Main extends javax.swing.JFrame {
         int tamano,puntuacion;
         tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
         puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-        articulos.add(new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
+//        articulos.add(new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
+//        this.label_Articulos_Titulo.getText(),color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,
+//        (Person)this.ComboBox_Contactos.getSelectedItem()));
+
+
+        Figura x = new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
         this.label_Articulos_Titulo.getText(),color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,
-        (Person)this.ComboBox_Contactos.getSelectedItem()));
+        (Person)this.ComboBox_Contactos.getSelectedItem());
+        DefaultComboBoxModel dc
+                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
+        dc.addElement(x);
         
+        JOptionPane.showMessageDialog(null, "Figura fue creado exitosamente!");
     }//GEN-LAST:event_Button_CrearFiguraActionPerformed
+
+    private void RM_ComboBox_ContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RM_ComboBox_ContactosActionPerformed
+
+    private void RM_ComboBox_ContactosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosItemStateChanged
+        // TODO add your handling code here:
+        if (evt.getStateChange() == 2) {
+            if (this.RM_ComboBox_Contactos.getSelectedItem() instanceof Gerente) {
+                Gerente manager = (Gerente)this.RM_ComboBox_Contactos.getSelectedItem();
+                Object [] newrow = {
+                    manager.getID(),
+                    manager.getAltura(),
+                    manager.getCargo(),
+                    manager.getEdad(),
+                    manager.getEstadoCivil(),
+                    manager.getName(),
+                    manager.getSexo(),
+                    manager.getPeso(),
+                    manager.getContrasena(),
+                    manager.getUsuario(),
+                };
+                DefaultTableModel modelo
+                    = (DefaultTableModel) this.JTable_Person.getModel();
+           modelo.addRow(newrow);
+           this.JTable_Person.setModel(modelo);
+            }
+//            Carro carros = (Carro)
+//                    this.jComboBox2.getSelectedItem();
+//            Object [] newrow = {
+//                carros.getMarca(),
+//                carros.getCarModel(),
+//                carros.getTipo(),
+//                carros.getFechaCreated()
+//            
+//            };
+//            DefaultTableModel modelo
+//                    = (DefaultTableModel) this.jTable1.getModel();
+//           modelo.addRow(newrow);
+//           this.jTable1.setModel(modelo);
+        }
+    }//GEN-LAST:event_RM_ComboBox_ContactosItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -917,6 +1105,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton Button_CrearPersonal;
     private javax.swing.JComboBox<String> ComboBox_Contactos;
     private javax.swing.ButtonGroup EstadoCivil;
+    private javax.swing.JTable JTable_Person;
+    private javax.swing.JButton RM_Button_Modificar;
+    private javax.swing.JButton RM_Button_Remove;
+    private javax.swing.JComboBox<String> RM_ComboBox_Articulos;
+    private javax.swing.JComboBox<String> RM_ComboBox_Contactos;
     private javax.swing.JRadioButton RadioB_Casado;
     private javax.swing.JRadioButton RadioB_Divorciado;
     private javax.swing.JRadioButton RadioB_F;
@@ -954,6 +1147,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -965,6 +1160,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JFormattedTextField label_Articulos_Calidad;
     private javax.swing.JTextField label_Articulos_CasaColaboracion;

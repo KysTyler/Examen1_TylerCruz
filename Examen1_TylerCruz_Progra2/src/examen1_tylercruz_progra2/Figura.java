@@ -7,6 +7,10 @@ public class Figura extends Articulos{
     private String instructions;
     private String garantia;
 
+    public Figura() {
+    }
+    
+
     public Figura(String descriptionFig, String instructions, String garantia, String titulo, Color color, String descripcion, String editorial, int tamano, int puntuacion, Person person) {
         super(titulo, color, descripcion, editorial, tamano, puntuacion, person);
         this.descriptionFig = descriptionFig;
