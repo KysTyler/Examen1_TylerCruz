@@ -124,6 +124,7 @@ public class Main extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         RM_Button_Remove = new javax.swing.JButton();
         RM_Button_Modificar = new javax.swing.JButton();
+        RM_Button_Remove1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
 
@@ -183,8 +184,6 @@ public class Main extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel18.setText("Registro: ");
 
-        ComboBox_Contactos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel19.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel19.setText("Gerente");
 
@@ -243,31 +242,23 @@ public class Main extends javax.swing.JFrame {
         Sex.add(RadioB_F);
         RadioB_F.setText("F");
 
-        label_Person_ID.setText("jTextField1");
         label_Person_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 label_Person_IDActionPerformed(evt);
             }
         });
 
-        label_Person_Nombre.setText("jTextField1");
         label_Person_Nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 label_Person_NombreActionPerformed(evt);
             }
         });
 
-        label_Articulos_Titulo.setText("jTextField8");
-
-        label_Articulos_Descripcion.setText("jTextField10");
-
-        label_Articulos_Editorial.setText("jTextField11");
-
-        label_Articulos_Tamano.setText("jTextField12");
-
-        label_Articulos_Puntuacion.setText("jTextField13");
-
-        label_Person_Ocupacion.setText("jTextField14");
+        label_Articulos_Titulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                label_Articulos_TituloActionPerformed(evt);
+            }
+        });
 
         EstadoCivil.add(RadioB_Soltero);
         RadioB_Soltero.setSelected(true);
@@ -279,39 +270,23 @@ public class Main extends javax.swing.JFrame {
         EstadoCivil.add(RadioB_Divorciado);
         RadioB_Divorciado.setText("Divorciado");
 
-        label_Person_Horario.setText("jTextField2");
-
-        label_Person_Tiempo.setText("jTextField5");
-
-        label_Articulos_Edicion.setText("jTextField15");
-
-        label_Articulos_CasaColaboracion.setText("jTextField16");
         label_Articulos_CasaColaboracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 label_Articulos_CasaColaboracionActionPerformed(evt);
             }
         });
 
-        label_Articulos_Pais.setText("jTextField17");
-
-        label_Articulos_DescripcionFiguras.setText("jTextField18");
         label_Articulos_DescripcionFiguras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 label_Articulos_DescripcionFigurasActionPerformed(evt);
             }
         });
 
-        label_Articulos_InstruccionesF.setText("jTextField19");
-
-        label_Articulos_TiempoGarantia.setText("jTextField20");
-
-        label_Articulos_Volumen.setText("jTextField21");
-
-        label_Articulos_DescripcionComics.setText("jTextField22");
-
-        label_Person_Cargo.setText("jTextField23");
-
-        label_Person_Usuario.setText("jTextField24");
+        label_Articulos_InstruccionesF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                label_Articulos_InstruccionesFActionPerformed(evt);
+            }
+        });
 
         Button_CrearGerente.setText("Create Gerente");
         Button_CrearGerente.addActionListener(new java.awt.event.ActionListener() {
@@ -348,22 +323,22 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        label_Person_Edad.setText("jFormattedTextField1");
+        label_Person_Edad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###"))));
 
-        label_Person_Altura.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        label_Person_Altura.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###"))));
 
-        label_Person_Peso.setText("jFormattedTextField3");
-
-        label_Articulos_Calidad.setText("jFormattedTextField4");
+        label_Person_Peso.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###"))));
 
         jLabel36.setText("Contrasena");
 
-        label_Person_Password.setText("jTextField1");
-
         jLabel37.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel37.setText("Horario:");
+        jLabel37.setText("Sueldo:");
 
-        label_Person_Sueldo.setText("jTextField1");
+        label_Person_Sueldo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                label_Person_SueldoActionPerformed(evt);
+            }
+        });
 
         Button_Color.setText("Color");
         Button_Color.addActionListener(new java.awt.event.ActionListener() {
@@ -679,7 +654,6 @@ public class Main extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(JTable_Person);
 
-        RM_ComboBox_Contactos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         RM_ComboBox_Contactos.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 RM_ComboBox_ContactosItemStateChanged(evt);
@@ -690,8 +664,6 @@ public class Main extends javax.swing.JFrame {
                 RM_ComboBox_ContactosActionPerformed(evt);
             }
         });
-
-        RM_ComboBox_Articulos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel38.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel38.setText("Combox de Personas: ");
@@ -704,10 +676,6 @@ public class Main extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(RM_ComboBox_Contactos, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -717,6 +685,10 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(RM_ComboBox_Articulos, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(183, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -734,9 +706,21 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        RM_Button_Remove.setText("Remove");
+        RM_Button_Remove.setText("Remove Persona");
+        RM_Button_Remove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RM_Button_RemoveActionPerformed(evt);
+            }
+        });
 
         RM_Button_Modificar.setText("Modificar");
+
+        RM_Button_Remove1.setText("Remove Articulo");
+        RM_Button_Remove1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RM_Button_Remove1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -747,9 +731,12 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(RM_Button_Remove)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(RM_Button_Modificar)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RM_Button_Remove1)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(RM_Button_Remove)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(RM_Button_Modificar)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -760,7 +747,9 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RM_Button_Remove)
                     .addComponent(RM_Button_Modificar))
-                .addGap(0, 169, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(RM_Button_Remove1)
+                .addGap(0, 131, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Remove and Modify", jPanel3);
@@ -776,7 +765,7 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 576, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Listar", jPanel4);
+        jTabbedPane1.addTab("Emulador Mensaje", jPanel4);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -822,114 +811,214 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void label_Person_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Person_IDActionPerformed
+    private void RM_Button_Remove1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RM_Button_Remove1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_label_Person_IDActionPerformed
+        try {
 
-    private void label_Person_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Person_NombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_Person_NombreActionPerformed
-
-    private void label_Articulos_CasaColaboracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_CasaColaboracionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_Articulos_CasaColaboracionActionPerformed
-
-    private void label_Articulos_DescripcionFigurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_DescripcionFigurasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_label_Articulos_DescripcionFigurasActionPerformed
-
-    private void Button_CrearGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearGerenteActionPerformed
-        // TODO add your handling code here:
-        //String usuario, String contrasena, String Cargo, String ID, String name, int edad, String sexo, String estadoCivil, double altura, int peso
-        int edad, peso;
-        double altura;
-        String sexo = "";
-        String estado = "";
-        edad = Integer.parseInt(this.label_Person_Altura.getText());
-        peso = Integer.parseInt(this.label_Person_Peso.getText());
-        if (this.RadioB_M.isSelected()) {
-            sexo = "Masculino";
-        } else {
-            sexo = "Femenino";
+            DefaultTableModel modelo
+            = (DefaultTableModel) this.RM_ComboBox_Articulos.getModel();
+            modelo.removeRow(this.RM_ComboBox_Articulos.getSelectedIndex());
+            articulos.remove(this.RM_ComboBox_Articulos.getSelectedIndex());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "No se pudo hacer");
         }
-        if (this.RadioB_Casado.isSelected()) {
-            estado = "Soltero";
-        } else if (this.RadioB_Divorciado.isSelected()) {
-            estado = "Divorciado";
-        } else if (RadioB_Casado.isSelected()) {
-            estado = "Casado";
+    }//GEN-LAST:event_RM_Button_Remove1ActionPerformed
+
+    private void RM_Button_RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RM_Button_RemoveActionPerformed
+        // TODO add your handling code here:
+        //if (this.RM_ComboBox_Contactos.getSelectedItem >= 0) {
+            try {
+                DefaultTableModel modelo
+                = (DefaultTableModel) this.RM_ComboBox_Contactos.getModel();
+                modelo.removeRow(this.RM_ComboBox_Contactos.getSelectedIndex());
+                contactos.remove(this.RM_ComboBox_Contactos.getSelectedIndex());
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se puedo Hacer");
+            }
+            //this.RM_ComboBox_Contactos.setModel(modelo);
+            //}
+    }//GEN-LAST:event_RM_Button_RemoveActionPerformed
+
+    private void RM_ComboBox_ContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RM_ComboBox_ContactosActionPerformed
+
+    private void RM_ComboBox_ContactosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosItemStateChanged
+        // TODO add your handling code here:
+        if (evt.getStateChange() == 2) {
+            if (this.RM_ComboBox_Contactos.getSelectedItem() instanceof Gerente) {
+                Gerente manager = (Gerente) this.RM_ComboBox_Contactos.getSelectedItem();
+                Object[] newrow = {
+                    manager.getID(),
+                    manager.getAltura(),
+                    manager.getCargo(),
+                    manager.getEdad(),
+                    manager.getEstadoCivil(),
+                    manager.getName(),
+                    manager.getSexo(),
+                    manager.getPeso(),
+                    manager.getContrasena(),
+                    manager.getUsuario(),};
+                DefaultTableModel modelo
+                = (DefaultTableModel) this.JTable_Person.getModel();
+                modelo.addRow(newrow);
+                this.JTable_Person.setModel(modelo);
+            }
         }
-        altura = Double.parseDouble(this.label_Person_Altura.getText());
-        Gerente x = new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
-                this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
-                edad, sexo, estado, altura, peso);
-//        contactos.add(new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
-//                this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
-//                edad, sexo, estado, altura, peso));
-        contactos.add(x);
+    }//GEN-LAST:event_RM_ComboBox_ContactosItemStateChanged
+
+    private void Button_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ColorActionPerformed
+        // TODO add your handling code here:
+        Button_Color.setForeground(JColorChooser.showDialog(this, "Eliga el color: ", Color.yellow));
+        color = Button_Color.getForeground();
+    }//GEN-LAST:event_Button_ColorActionPerformed
+
+    private void label_Person_SueldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Person_SueldoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Person_SueldoActionPerformed
+
+    private void Button_CrearFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearFiguraActionPerformed
+        // TODO add your handling code here:
+        //String descriptionFig, String instructions, String garantia, String titulo, Color color, String descripcion, String editorial,
+        //int tamano, int puntuacion, Person person
+        try {
+            int tamano, puntuacion;
+            tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
+            puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
+
+            Figura x = new Figura(this.label_Articulos_DescripcionFiguras.getText(), this.label_Articulos_InstruccionesF.getText(), this.label_Articulos_TiempoGarantia.getText(),
+                this.label_Articulos_Titulo.getText(), color, this.label_Articulos_Descripcion.getText(), this.label_Articulos_Editorial.getText(), tamano, puntuacion,
+                (Person) this.ComboBox_Contactos.getSelectedItem());
+            DefaultComboBoxModel dc
+            = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
+            dc.addElement(x);
+
+            JOptionPane.showMessageDialog(null, "Figura fue creado exitosamente!");
+            this.label_Articulos_Volumen.setText("");
+            this.label_Articulos_Calidad.setText("");
+            this.label_Articulos_Tamano.setText("");
+            this.label_Articulos_Puntuacion.setText("");
+            this.label_Articulos_DescripcionComics.setText("");
+            this.label_Articulos_Titulo.setText("");
+            this.label_Articulos_Descripcion.setText("");
+            this.label_Articulos_Editorial.setText("");
+            this.label_Articulos_InstruccionesF.setText("");
+            this.label_Articulos_TiempoGarantia.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error probablemente con los ingresos de datos");
+        }
+    }//GEN-LAST:event_Button_CrearFiguraActionPerformed
+
+    private void Button_CrearJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearJuegoActionPerformed
+        // TODO add your handling code here:
+        //int edicion, String casaElaboracion, String pais, String titulo, Color color,
+        //String descripcion, String editorial, int tamano, int puntuacion, Person person
+        try {
+            int edicion, tamano, puntuacion;
+            edicion = Integer.parseInt(this.label_Articulos_Edicion.getText());
+            tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
+            puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
+            //        articulos.add(new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
+                //        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
+
+        Juego x = new Juego(edicion, this.label_Articulos_CasaColaboracion.getText(), this.label_Articulos_Pais.getText(), this.label_Articulos_Titulo.getText(),
+            color, this.label_Articulos_Descripcion.getText(), this.label_Articulos_Editorial.getText(), tamano, puntuacion, (Person) this.ComboBox_Contactos.getSelectedItem());
         DefaultComboBoxModel dc
-                = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
+        = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
         dc.addElement(x);
-        DefaultComboBoxModel dc1
-                = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
+
+        JOptionPane.showMessageDialog(null, "Juego fue creado exitosamente!");
+        this.label_Articulos_Volumen.setText("");
+        this.label_Articulos_Calidad.setText("");
+        this.label_Articulos_Tamano.setText("");
+        this.label_Articulos_Puntuacion.setText("");
+        this.label_Articulos_DescripcionComics.setText("");
+        this.label_Articulos_Titulo.setText("");
+        this.label_Articulos_Descripcion.setText("");
+        this.label_Articulos_Editorial.setText("");
+        this.label_Articulos_Editorial.setText("");
+        this.label_Articulos_Pais.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error probablemente con los ingresos de datos");
+        }
+    }//GEN-LAST:event_Button_CrearJuegoActionPerformed
+
+    private void Button_CrearComicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearComicActionPerformed
+        // TODO add your handling code here:
+        //double volumen, String descripcionComic, int estadoCalidad, String titulo, Color color,
+        //String descripcion, String editorial, int tamano, int puntuacion, Person person
+        try {
+            double volumen;
+            int estadoCalidad, tamano, puntuacion;
+            volumen = Double.parseDouble(this.label_Articulos_Volumen.getText());
+            estadoCalidad = Integer.parseInt(this.label_Articulos_Calidad.getText());
+            tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
+            puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
+            //        articulos.add(new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
+                //        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
+        //
+        Comic x = new Comic(volumen, this.label_Articulos_DescripcionComics.getText(), estadoCalidad, this.label_Articulos_Titulo.getText(),
+            color, this.label_Articulos_Descripcion.getText(), this.label_Articulos_Editorial.getText(), tamano, puntuacion, (Person) this.ComboBox_Contactos.getSelectedItem());
+        DefaultComboBoxModel dc
+        = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
         dc.addElement(x);
-        
-        this.label_Person_Usuario.setText("");
-        this.label_Person_Password.setText("");
-        this.label_Person_Altura.setText("");
-        this.label_Person_Horario.setText("");
-        this.label_Person_Peso.setText("");
-        this.label_Person_Altura.setText("");
-        this.label_Person_Sueldo.setText("");
-        this.label_Person_Ocupacion.setText("");
-        this.label_Person_Horario.setText("");
-        this.label_Person_ID.setText("");
-        this.label_Person_Nombre.setText("");
-        JOptionPane.showMessageDialog(null, "Gerente fue creado exitosamente!");
 
+        JOptionPane.showMessageDialog(null, "Comic fue creado exitosamente!");
+        this.label_Articulos_Volumen.setText("");
+        this.label_Articulos_Calidad.setText("");
+        this.label_Articulos_Tamano.setText("");
+        this.label_Articulos_Puntuacion.setText("");
+        this.label_Articulos_DescripcionComics.setText("");
+        this.label_Articulos_Titulo.setText("");
+        this.label_Articulos_Descripcion.setText("");
+        this.label_Articulos_Editorial.setText("");
 
-    }//GEN-LAST:event_Button_CrearGerenteActionPerformed
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error probablemente con los ingresos de datos");
+        }
+    }//GEN-LAST:event_Button_CrearComicActionPerformed
 
     private void Button_CrearPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearPersonalActionPerformed
         // TODO add your handling code here:
         //String ocupacion, String Horario, int semanas, double sueldo, String ID, String name, int edad, String sexo, String estadoCivil, double altura, int peso
-        int edad, peso, semanas;
-        double altura, sueldo;
-        String sexo = "";
-        String estado = "";
-        edad = Integer.parseInt(this.label_Person_Altura.getText());
-        semanas = Integer.parseInt(this.label_Person_Horario.getText());
-        peso = Integer.parseInt(this.label_Person_Peso.getText());
-        altura = Double.parseDouble(this.label_Person_Altura.getText());
-        sueldo = Double.parseDouble(this.label_Person_Sueldo.getText());
+        try {
+            int edad, peso, semanas;
+            double altura, sueldo;
+            String sexo = "";
+            String estado = "";
+            edad = Integer.parseInt(this.label_Person_Altura.getText());
+            semanas = Integer.parseInt(this.label_Person_Tiempo.getText());
+            peso = Integer.parseInt(this.label_Person_Peso.getText());
+            altura = Double.parseDouble(this.label_Person_Altura.getText());
+            sueldo = Double.parseDouble(this.label_Person_Sueldo.getText());
 
-        if (this.RadioB_M.isSelected()) {
-            sexo = "Masculino";
-        } else {
-            sexo = "Femenino";
-        }
-        if (this.RadioB_Casado.isSelected()) {
-            estado = "Soltero";
-        } else if (this.RadioB_Divorciado.isSelected()) {
-            estado = "Divorciado";
-        } else if (RadioB_Casado.isSelected()) {
-            estado = "Casado";
-        }
-        Personal x = new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
+            if (this.RadioB_M.isSelected()) {
+                sexo = "Masculino";
+            } else {
+                sexo = "Femenino";
+            }
+            if (this.RadioB_Casado.isSelected()) {
+                estado = "Soltero";
+            } else if (this.RadioB_Divorciado.isSelected()) {
+                estado = "Divorciado";
+            } else if (RadioB_Casado.isSelected()) {
+                estado = "Casado";
+            }
+            Personal x = new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
                 semanas, sueldo, this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
                 edad, sexo, estado, altura, peso);
-//        contactos.add(new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
-//                semanas, sueldo, this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
-//                edad, sexo, estado, altura, peso));
+            //        contactos.add(new Personal(this.label_Person_Ocupacion.getText(), this.label_Person_Horario.getText(),
+                //                semanas, sueldo, this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
+                //                edad, sexo, estado, altura, peso));
         contactos.add(x);
         DefaultComboBoxModel dc
-                = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
+        = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
         dc.addElement(x);
         DefaultComboBoxModel dc1
-                = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
-        dc.addElement(x);
-        
-        
+        = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
+        dc1.addElement(x);
+
         this.label_Person_Altura.setText("");
         this.label_Person_Horario.setText("");
         this.label_Person_Peso.setText("");
@@ -941,120 +1030,91 @@ public class Main extends javax.swing.JFrame {
         this.label_Person_Nombre.setText("");
         JOptionPane.showMessageDialog(null, "Personal fue creado exitosamente!");
 
-
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Ocurrio un error probablemente con los ingresos de datos");
+        }
     }//GEN-LAST:event_Button_CrearPersonalActionPerformed
 
-    private void Button_CrearComicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearComicActionPerformed
+    private void Button_CrearGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearGerenteActionPerformed
         // TODO add your handling code here:
-        //double volumen, String descripcionComic, int estadoCalidad, String titulo, Color color, 
-        //String descripcion, String editorial, int tamano, int puntuacion, Person person
-        double volumen;
-        int estadoCalidad,tamano,puntuacion;
-        volumen = Double.parseDouble(this.label_Articulos_Volumen.getText());
-        estadoCalidad = Integer.parseInt(this.label_Articulos_Calidad.getText());
-        tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
-        puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-//        articulos.add(new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
-//        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
-//        
-        Comic x = new Comic(volumen,this.label_Articulos_DescripcionComics.getText(),estadoCalidad,this.label_Articulos_Titulo.getText(),
-        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem());
-        DefaultComboBoxModel dc
-                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
-        dc.addElement(x);
-        
-        JOptionPane.showMessageDialog(null, "Comic fue creado exitosamente!");
-    }//GEN-LAST:event_Button_CrearComicActionPerformed
-
-    private void Button_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ColorActionPerformed
-        // TODO add your handling code here:
-        Button_Color.setForeground(JColorChooser.showDialog(this, "Eliga el color: ", Color.yellow));
-        color = Button_Color.getForeground();
-    }//GEN-LAST:event_Button_ColorActionPerformed
-
-    private void Button_CrearJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearJuegoActionPerformed
-        // TODO add your handling code here:
-        //int edicion, String casaElaboracion, String pais, String titulo, Color color,
-        //String descripcion, String editorial, int tamano, int puntuacion, Person person
-        int edicion,tamano,puntuacion;
-        edicion = Integer.parseInt(this.label_Articulos_Edicion.getText());
-        tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
-        puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-//        articulos.add(new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
-//        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem()));
-        
-        Juego x = new Juego(edicion,this.label_Articulos_CasaColaboracion.getText(),this.label_Articulos_Pais.getText(),this.label_Articulos_Titulo.getText(),
-        color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,(Person)this.ComboBox_Contactos.getSelectedItem());
-        DefaultComboBoxModel dc
-                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
-        dc.addElement(x);
-        
-        JOptionPane.showMessageDialog(null, "Juego fue creado exitosamente!");
-    }//GEN-LAST:event_Button_CrearJuegoActionPerformed
-
-    private void Button_CrearFiguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CrearFiguraActionPerformed
-        // TODO add your handling code here:
-        //String descriptionFig, String instructions, String garantia, String titulo, Color color, String descripcion, String editorial,
-        //int tamano, int puntuacion, Person person
-        int tamano,puntuacion;
-        tamano = Integer.parseInt(this.label_Articulos_Tamano.getText());
-        puntuacion = Integer.parseInt(this.label_Articulos_Puntuacion.getText());
-//        articulos.add(new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
-//        this.label_Articulos_Titulo.getText(),color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,
-//        (Person)this.ComboBox_Contactos.getSelectedItem()));
-
-
-        Figura x = new Figura(this.label_Articulos_DescripcionFiguras.getText(),this.label_Articulos_InstruccionesF.getText(),this.label_Articulos_TiempoGarantia.getText(),
-        this.label_Articulos_Titulo.getText(),color,this.label_Articulos_Descripcion.getText(),this.label_Articulos_Editorial.getText(),tamano,puntuacion,
-        (Person)this.ComboBox_Contactos.getSelectedItem());
-        DefaultComboBoxModel dc
-                = (DefaultComboBoxModel) this.RM_ComboBox_Articulos.getModel();
-        dc.addElement(x);
-        
-        JOptionPane.showMessageDialog(null, "Figura fue creado exitosamente!");
-    }//GEN-LAST:event_Button_CrearFiguraActionPerformed
-
-    private void RM_ComboBox_ContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RM_ComboBox_ContactosActionPerformed
-
-    private void RM_ComboBox_ContactosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_RM_ComboBox_ContactosItemStateChanged
-        // TODO add your handling code here:
-        if (evt.getStateChange() == 2) {
-            if (this.RM_ComboBox_Contactos.getSelectedItem() instanceof Gerente) {
-                Gerente manager = (Gerente)this.RM_ComboBox_Contactos.getSelectedItem();
-                Object [] newrow = {
-                    manager.getID(),
-                    manager.getAltura(),
-                    manager.getCargo(),
-                    manager.getEdad(),
-                    manager.getEstadoCivil(),
-                    manager.getName(),
-                    manager.getSexo(),
-                    manager.getPeso(),
-                    manager.getContrasena(),
-                    manager.getUsuario(),
-                };
-                DefaultTableModel modelo
-                    = (DefaultTableModel) this.JTable_Person.getModel();
-           modelo.addRow(newrow);
-           this.JTable_Person.setModel(modelo);
+        //String usuario, String contrasena, String Cargo, String ID, String name, int edad, String sexo, String estadoCivil, double altura, int peso
+        try {
+            int edad, peso;
+            double altura;
+            String sexo = "";
+            String estado = "";
+            edad = Integer.parseInt(this.label_Person_Altura.getText());
+            peso = Integer.parseInt(this.label_Person_Peso.getText());
+            if (this.RadioB_M.isSelected()) {
+                sexo = "Masculino";
+            } else {
+                sexo = "Femenino";
             }
-//            Carro carros = (Carro)
-//                    this.jComboBox2.getSelectedItem();
-//            Object [] newrow = {
-//                carros.getMarca(),
-//                carros.getCarModel(),
-//                carros.getTipo(),
-//                carros.getFechaCreated()
-//            
-//            };
-//            DefaultTableModel modelo
-//                    = (DefaultTableModel) this.jTable1.getModel();
-//           modelo.addRow(newrow);
-//           this.jTable1.setModel(modelo);
+            if (this.RadioB_Casado.isSelected()) {
+                estado = "Soltero";
+            } else if (this.RadioB_Divorciado.isSelected()) {
+                estado = "Divorciado";
+            } else if (RadioB_Casado.isSelected()) {
+                estado = "Casado";
+            }
+            altura = Double.parseDouble(this.label_Person_Altura.getText());
+            Gerente x = new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
+                this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
+                edad, sexo, estado, altura, peso);
+            //        contactos.add(new Gerente(this.label_Person_Usuario.getText(), this.label_Person_Password.getText(),
+                //                this.label_Person_Cargo.getText(), this.label_Person_ID.getText(), this.label_Person_Nombre.getText(),
+                //                edad, sexo, estado, altura, peso));
+        contactos.add(x);
+        DefaultComboBoxModel dc
+        = (DefaultComboBoxModel) this.ComboBox_Contactos.getModel();
+        dc.addElement(x);
+        DefaultComboBoxModel dc1
+        = (DefaultComboBoxModel) this.RM_ComboBox_Contactos.getModel();
+        dc1.addElement(x);
+
+        this.label_Person_Usuario.setText("");
+        this.label_Person_Password.setText("");
+        this.label_Person_Altura.setText("");
+        this.label_Person_Horario.setText("");
+        this.label_Person_Peso.setText("");
+        this.label_Person_Altura.setText("");
+        this.label_Person_Sueldo.setText("");
+        this.label_Person_Ocupacion.setText("");
+        this.label_Person_Horario.setText("");
+        this.label_Person_ID.setText("");
+        this.label_Person_Nombre.setText("");
+        this.label_Person_Edad.setText("");
+        this.label_Person_Cargo.setText("");
+        JOptionPane.showMessageDialog(null, "Gerente fue creado exitosamente!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error probablemente con los ingresos de datos");
         }
-    }//GEN-LAST:event_RM_ComboBox_ContactosItemStateChanged
+    }//GEN-LAST:event_Button_CrearGerenteActionPerformed
+
+    private void label_Articulos_InstruccionesFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_InstruccionesFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Articulos_InstruccionesFActionPerformed
+
+    private void label_Articulos_DescripcionFigurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_DescripcionFigurasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Articulos_DescripcionFigurasActionPerformed
+
+    private void label_Articulos_CasaColaboracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_CasaColaboracionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Articulos_CasaColaboracionActionPerformed
+
+    private void label_Articulos_TituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Articulos_TituloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Articulos_TituloActionPerformed
+
+    private void label_Person_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Person_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Person_NombreActionPerformed
+
+    private void label_Person_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_Person_IDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_Person_IDActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1108,6 +1168,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTable JTable_Person;
     private javax.swing.JButton RM_Button_Modificar;
     private javax.swing.JButton RM_Button_Remove;
+    private javax.swing.JButton RM_Button_Remove1;
     private javax.swing.JComboBox<String> RM_ComboBox_Articulos;
     private javax.swing.JComboBox<String> RM_ComboBox_Contactos;
     private javax.swing.JRadioButton RadioB_Casado;

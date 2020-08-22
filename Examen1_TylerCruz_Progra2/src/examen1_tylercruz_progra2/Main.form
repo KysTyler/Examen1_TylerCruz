@@ -587,12 +587,7 @@
                 <Component class="javax.swing.JComboBox" name="ComboBox_Contactos">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
-                      </StringArray>
+                      <StringArray count="0"/>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -753,50 +748,29 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_ID">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Person_IDActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Nombre">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Person_NombreActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Titulo">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField8"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Articulos_TituloActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Descripcion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField10"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Editorial">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField11"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Tamano">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField12"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Puntuacion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField13"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Ocupacion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField14"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="RadioB_Soltero">
                   <Properties>
@@ -824,70 +798,37 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Horario">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Tiempo">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField5"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Edicion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField15"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_CasaColaboracion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField16"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Articulos_CasaColaboracionActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Pais">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField17"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_DescripcionFiguras">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField18"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Articulos_DescripcionFigurasActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_InstruccionesF">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField19"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Articulos_InstruccionesFActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_TiempoGarantia">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField20"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_Volumen">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField21"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Articulos_DescripcionComics">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField22"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Cargo">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField23"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Usuario">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField24"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="Button_CrearGerente">
                   <Properties>
@@ -931,25 +872,26 @@
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="label_Person_Edad">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jFormattedTextField1"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                      <Format format="###" subtype="-1" type="0"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="label_Person_Altura">
                   <Properties>
                     <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-                      <Format subtype="0" type="0"/>
+                      <Format format="###" subtype="-1" type="0"/>
                     </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="label_Person_Peso">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jFormattedTextField3"/>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                      <Format format="###" subtype="-1" type="0"/>
+                    </Property>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JFormattedTextField" name="label_Articulos_Calidad">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jFormattedTextField4"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel36">
                   <Properties>
@@ -957,22 +899,19 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Password">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="14" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Horario:"/>
+                    <Property name="text" type="java.lang.String" value="Sueldo:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="label_Person_Sueldo">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_Person_SueldoActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="Button_Color">
                   <Properties>
@@ -1002,9 +941,14 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-                          <Component id="RM_Button_Remove" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="RM_Button_Modificar" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="RM_Button_Remove1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="RM_Button_Remove" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="RM_Button_Modificar" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1018,7 +962,9 @@
                               <Component id="RM_Button_Remove" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="RM_Button_Modificar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="169" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="RM_Button_Remove1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="131" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1030,11 +976,6 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="RM_ComboBox_Contactos" min="-2" pref="449" max="-2" attributes="0"/>
@@ -1046,6 +987,11 @@
                                   <Component id="jLabel39" min="-2" pref="170" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="183" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1094,12 +1040,7 @@
                     <Component class="javax.swing.JComboBox" name="RM_ComboBox_Contactos">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
                       <Events>
@@ -1113,12 +1054,7 @@
                     <Component class="javax.swing.JComboBox" name="RM_ComboBox_Articulos">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                          <StringArray count="0"/>
                         </Property>
                       </Properties>
                       <AuxValues>
@@ -1145,21 +1081,32 @@
                 </Container>
                 <Component class="javax.swing.JButton" name="RM_Button_Remove">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Remove"/>
+                    <Property name="text" type="java.lang.String" value="Remove Persona"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RM_Button_RemoveActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="RM_Button_Modificar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JButton" name="RM_Button_Remove1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Remove Articulo"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RM_Button_Remove1ActionPerformed"/>
+                  </Events>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel4">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Listar">
-                    <Property name="tabTitle" type="java.lang.String" value="Listar"/>
+                  <JTabbedPaneConstraints tabName="Emulador Mensaje">
+                    <Property name="tabTitle" type="java.lang.String" value="Emulador Mensaje"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
